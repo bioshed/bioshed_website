@@ -1,0 +1,16 @@
+{% for item in collections.sections %}
+  {% if item.data.type === 'register' %}
+    <div id="register" class="w-full min-h-screen flex flex-col justify-center items-center bg-gray-800">
+      <div class="self-center text-center w-full xl:w-1/3 px-4 sm:px:0">
+        <h2 class="font-bold silentborder2 tracking-widest text-gray-200 text-4xl mb-4">{{ item.data.title }}</h2>
+        <div class="font-light text-gray-400 text-xl">
+          {{ item.templateContent | safe }}
+        </div>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jerrybioinformatics" style="min-width:320px;height:630px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

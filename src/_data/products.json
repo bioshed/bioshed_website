@@ -1,0 +1,22 @@
+[
+  {
+    "title": "BioShed OS",
+    "icon": "icon5.svg",
+    "content": "As our core product, BioShed OS is your bioinformatics operating system in the cloud. BioShed OS sets up infrastructure within your own cloud or hybrid environment, without any disruption of your existing infrastructure. BioShed OS handles all of the infrastructure for you and provides all the software tools you need, so you can focus on the bionformatics."
+  },
+  {
+    "title": "BioShed Atlas",
+    "icon": "icon1.svg",
+    "content": "Looking for publicly available genomic datasets, but don't know where to start? Bioshed Atlas is your answer. We have curated and provide an easy search-and-download interface to over 1M datasets across NCBI, ENCODE, TCGA and other public data repositories, saving precious time and resources - so that you can focus on the data analysis."
+  },
+  {
+    "title": "BioShed Shuttle",
+    "icon": "icon3.svg",
+    "content": "Tired of manually transferring large sequencing files? BioShed Shuttle automates the transfer of sequencing files from your sequencer or any laptop or server to your cloud storage."
+  },
+  {
+    "title": "BioShed Portal",
+    "icon": "icon4.svg",
+    "content": "BioShed Portal provides a secure, web-based interface to your sequencing data, to facilitate collaboration and file-sharing."
+  }
+]
