@@ -1,5 +1,6 @@
 {
   "baseURL": "http://www.bioshed.io",
+  "authURL": "https://auth.bioshed.io",
   "author": "Bioinformatics Toolkit",
   "description": "BioShed",
   "title": "BioShed",

@@ -1,25 +1,27 @@
 <nav
-  class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white sm:bg-transparent shadow sm:shadow-none">
+  class="flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-6 py-1 bg-white md:bg-transparent shadow md:shadow-none">
   <div
-    class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
+    class="w-full md:w-auto self-start md:self-center flex flex-row md:flex-none flex-no-wrap justify-between items-center">
     <a href="/" class="no-underline tracking-wide font-bold text-red-600 text-2xl mb-6 silentborder">
-      <img src="/img/bioshed-logo.png"class="h-12 py-1 alt=""></img>
-      <!-- <span class="text-gray-800 tracking tracking-widest">BioShed</span></a> -->
-    <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();" aria-label="Show Menu"><span
+      <img src="/img/bioshed-logo.png"class="h-12 py-1 alt=""></img></a>
+    <button id="menuBtn" class="hamburger block md:hidden focus:outline-none" type="button" onclick="navToggle();" aria-label="Show Menu"><span
         class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span></button>
   </div>
   <div id="menu"
-    class="w-full sm:w-auto self-end sm:self-center hidden sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0">
+    class="w-full md:w-auto self-end md:self-center hidden md:flex flex-col md:flex-row items-center h-full py-1 pb-4 md:py-0 md:pb-0">
     <!-- Products -->
-    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1"
+    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline md:w-auto md:px-4 py-2 md:py-1"
       href="{% if isFront %}#products{% else %}{{ site.baseURL }}/#products{% endif %}">Products</a>
-    <!-- About -->
-    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1"
+    <!-- Docs -->
+    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline md:w-auto md:px-4 py-2 md:py-1"
       href="{% if isFront %}docs{% else %}{{ site.baseURL }}/docs{% endif %}">Documentation&nbsp&nbsp</a>
-    <!-- Clients -->
-    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1"
-      href="{% if isFront %}#about{% else %}{{ site.baseURL }}/#clients{% endif %}">About</a>
-    <a class="text-gray-800 border font-bold border-indigo-800 text-lg bg-red-200 rounded-full w-auto no-underline text-center sm:text-left hover:border-red-600 hover:text-red-600 hover:bg-white hover:shadow-md px-6 py-1 my-2 sm:my-0 sm:ml-4"
-      href="https://auth.bioshed.io/login?response_type=code&client_id=5oo50h26hmphppn7lhd8rp0mmp&redirect_uri=https://www.bioshed.io/home">Sign-Up for Free</a>
+    <!-- About -->
+    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline md:w-auto md:pr-4 py-2 md:py-1"
+      href="{% if isFront %}#about{% else %}{{ site.baseURL }}/#clients{% endif %}">&nbspAbout</a>
+    <!-- Login -->
+    <a class="text-gray-800 hover:text-red-600 text-lg text-center w-full no-underline md:w-auto md:pr-4 py-2 md:py-1"
+      href="{{ site.authURL }}/login?response_type=code&client_id=5oo50h26hmphppn7lhd8rp0mmp&redirect_uri=https://www.bioshed.io/home">&nbsp&nbsp&nbspLogin</a>
+    <a class="text-gray-800 border font-bold border-indigo-800 bg-red-200 rounded-full w-auto no-underline text-center md:text-left hover:border-red-600 hover:text-red-600 hover:bg-white hover:shadow-md md:text-lg px-6 py-1 my-2 md:my-0 md:ml-4"
+      href="{{ site.authURL }}/signup?response_type=code&client_id=5oo50h26hmphppn7lhd8rp0mmp&redirect_uri=https://www.bioshed.io/home">Sign-Up for Free</a>
   </div>
 </nav>
