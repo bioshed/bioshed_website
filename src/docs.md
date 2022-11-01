@@ -23,7 +23,7 @@ To setup and integrate BioShed into your existing AWS environment, type:
 
 **`$ bioshed setup aws`**
 
-You will be prompted for your AWS credentials.
+You will be prompted for your AWS credentials.  For help with AWS user credentials, see <a href="https://www.youtube.com/watch?v=qmtDRmplMG4">here</a>.
 
 BioShed has been verified to work on Linux and Mac OS X systems. If you are having trouble installing or setting up BioShed, please contact us at <a href="mailto:support@bioshed.io">support@bioshed.io</a>.
 
@@ -45,6 +45,10 @@ You can also easily build and integrate your own applications into the BioShed e
 
 To get started, make sure you have a cloud account (we currently support AWS) and you have properly initialized and setup your BioShed environment.
 
+IMPORTANT: You need to first deploy the core BioShed OS infrastructure to your cloud environment. To do this, type:
+
+`$ bioshed deploy core`
+
 To run an application, you simply prefix with **bioshed run** and run as you would on the command line. For example:
 
 `$ bioshed run fastqc s3://myfastqs/my-R1.fastq.gz`
@@ -52,6 +56,18 @@ To run an application, you simply prefix with **bioshed run** and run as you wou
 Will run FastQC in your cloud environment and output the results back to the same folder as the input FASTQ file. When you run a BioShed application, we recommend you specify a remote output path by providing **out::** as the last argument, like so:
 
 `$ bioshed run fastqc s3://myfastqs/my-R1.fastq.gz out::s3://fastqcout/`
+
+For help with any application module, make sure you have <a href="https://docs.docker.com/get-docker/">Docker</a> installed and configured on your system, and just type:
+
+`$ bioshed run --local <MODULE_NAME> --help`
+
+For Admins: To uninstall and tear down your BioShed infrastructure, type the following:
+
+`$ bioshed teardown aws`
+
+`$ pip uninstall bioshed`
+
+For more help, please contact us at <a href="mailto:support@bioshed.io">support@bioshed.io</a>
 
 ================================================================================
 ### BioShed Atlas ###
@@ -99,13 +115,9 @@ By default, this will download to the current folder. You can specify a relative
 
 NOTE: Again, you MUST have a bioshed_encode.txt search results file before you can run bioshed download.
 
-You can also specify a different results file to download files:
+If you only want to download new files (i.e., don't overwrite existing files), type:
 
-`$ bioshed download encode newsearch_results.txt`
-
-You can change the output file name in your original search by typing:
-
-`$ bioshed search encode <SEARCH_TERMS> --output MY-NEW-RESULTS-FILE.txt`
+`$ bioshed download encode --update`
 
 For help with anything else, including a full list of search categories and valid command-line arguments, type:
 

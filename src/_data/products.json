@@ -2,7 +2,7 @@
   {
     "title": "BioShed OS",
     "icon": "icon5.svg",
-    "content": "As our core product, BioShed OS is your bioinformatics operating system in the cloud. BioShed OS sets up infrastructure within your own cloud or hybrid environment, without any disruption of your existing infrastructure. BioShed OS handles all of the infrastructure for you and provides all the software tools you need, so you can focus on the bionformatics."
+    "content": "BioShed OS is your bioinformatics operating system in the cloud. With a few easy commands, BioShed OS sets up bioinformatics infrastructure in your own cloud / hybrid environment in 5 minutes, without any disruption of your existing infrastructure. BioShed OS handles all of the infrastructure for you and provides all the software tools you need, so you can focus on the bionformatics."
   },
   {
     "title": "BioShed Atlas",
