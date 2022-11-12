@@ -9,6 +9,10 @@ Make sure pip (https://pypi.org/project/pip/) is installed on your system and ty
 
 **`$ pip install bioshed`**
 
+Depending on your system, you may need to use pip3 (BioShed uses Python 3), and you may need to install it as a user:
+
+**`$ pip3 install --user bioshed`**
+
 ### Initialization and Setup ###
 
 Once installed, initialize your BioShed environment by typing:
@@ -24,6 +28,12 @@ To setup and integrate BioShed into your existing AWS environment, type:
 **`$ bioshed setup aws`**
 
 You will be prompted for your AWS credentials.  For help with AWS user credentials, see <a href="https://www.youtube.com/watch?v=qmtDRmplMG4">here</a>.
+
+You will also be prompted for a public security key, which is used to access AWS resources. Generate a public key by typing:
+
+**`$ ssh-keygen`**
+
+and following the instructions to generate two files: <KEY_FILE> (private key) and <KEY_FILE>.pub (public key). Copy the contents of <KEY_FILE>.pub when prompted during BioShed setup.
 
 BioShed has been verified to work on Linux and Mac OS X systems. If you are having trouble installing or setting up BioShed, please contact us at <a href="mailto:support@bioshed.io">support@bioshed.io</a>.
 
